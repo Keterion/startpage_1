@@ -1,0 +1,176 @@
+:root {
+    --accent: #bbb;
+    --search-text: #a89984;
+    --search-bg: #1d2021;
+    --search-hover: #282828;
+
+    --card-title: #a89984;
+    --card-color: #1d2021;
+    --card-hover: #282828;
+    --card-link: #a89984;
+    --card-link-hover: #d5c4a1;
+
+    --display: none;
+}
+@font-face {
+    font-family: df;
+    src: url(/src/assets/fonts/noto_mono.ttf);
+}
+body, html {
+    background-color: #28282890;
+    height: 100%;
+    margin: 0;
+    font-family: df;
+}
+.bg-image {    
+    position: fixed;
+    background-image: var(--image);
+    
+    filter:blur(5px);
+    height: 100vh;
+
+    background-position: center center;
+    background-size:cover;
+
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+}
+
+.switcher {
+    position: relative;
+    display: inline-block;
+}
+.switcherbtn {
+    border: none;
+    height: 2vw;
+    width: 2vw;
+    color: var(--accent);
+    background-color: var(--card-color);
+    border: 2px solid var(--accent);
+}
+.pages {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.page {
+    height: 2vw;
+    width: 2vw;
+    margin-top: .2vh;
+    display: block;
+    background-color: var(--card-color);
+    border: 1px solid var(--accent);
+    box-sizing: border-box;
+    color: var(--card-title);
+
+    transition: all .2s;
+}
+
+.switcher:hover .pages {
+    display: block;
+}
+.switcher:hover .switcherbtn {
+    background-color: var(--card-hover);
+}
+.page:hover {
+    background-color: var(--card-hover);
+    color: var(--accent);
+}
+
+
+
+
+
+.main-container {
+    position: absolute;
+    z-index: 2;
+    height: 80vh;
+    width: 70vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    
+    border: var(--luBorder);
+    box-sizing: border-box;
+}
+.greeting {
+    text-align: center;
+    margin-top: 5%;
+    color: var(--accent);
+    text-decoration: underline;
+}
+.searchbar-input {
+    width: 50%;
+    height: 4vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left: 2%;
+
+    background: none;
+
+    border: 4px solid var(--accent);
+    border-radius: 4.5vh;
+    background-color: var(--search-bg);
+    outline: none;
+    color: var(--search-text);
+    text-align: left;
+    box-sizing: border-box;
+}
+.searchbar-input:hover {
+    background-color: var(--search-hover);
+}
+
+.card-container {
+    width: 100%;
+    height: 50%;
+
+    margin-top: 5%;
+
+    box-sizing: border-box;
+    border: var(--luBorder);
+
+    text-align: center;
+    display: var(--display);
+}
+.card {
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+    background-color: var(--card-color);
+
+    box-sizing: border-box;
+    border: 3px solid var(--accent);
+    border-radius: 20px;
+
+    transition: background-color .2s;
+}
+.card h1 {
+    color: var(--card-title);
+    font-size: 1.5vw;
+}
+.card-content {
+    height: 100%;
+    border: var(--luBorder);
+}
+.card-content *{
+    text-decoration: none;
+    color: var(--card-link);
+    border: var(--luBorder);
+    font-size: 1.5vw;
+    height: fit-content;
+
+    transition: color .2s;
+}
+.card:hover {
+    background-color: var(--card-hover);
+}
+.card-content *:hover {
+    color: var(--card-link-hover);
+}
