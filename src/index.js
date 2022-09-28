@@ -8,7 +8,7 @@ function background(){
         "nature_waterfall.png",
         "violet_mountain.png"];
     let chosenOne = list[Math.floor(Math.random()*list.length)];
-    document.documentElement.style.setProperty('--image', 'url(/src/assets/backgrounds/' + chosenOne + ')');
+    document.documentElement.style.setProperty('--image', 'url(assets/backgrounds/' + chosenOne + ')');
 }
 function greeting(){
     var greetings = [
