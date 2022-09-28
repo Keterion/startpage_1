@@ -14,7 +14,7 @@
 }
 @font-face {
     font-family: df;
-    src: url(/src/assets/fonts/noto_mono.ttf);
+    src: url(assets/fonts/noto_mono.ttf);
 }
 body, html {
     background-color: #28282890;
